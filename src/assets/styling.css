@@ -14,14 +14,18 @@
     --septenary: #FF5A5F;	 /* Error (Delete/Warnings) */
 }
 
+.inverted {
+    filter: invert(1) hue-rotate(180deg);
+}
 
-
-body, html {
+body {
     scroll-behavior: smooth;
     width: 100dvw;
     height: 100dvh;
 
     background-color: var(--primary);
+    transition: all 0.3s ease-in-out;
+
 }
 
 
@@ -76,8 +80,8 @@ body, html {
 
 
 .profile {
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
 
     background-color: var(--secondary);
     border: var(--tertiary) 3px solid;
