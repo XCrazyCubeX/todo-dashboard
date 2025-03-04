@@ -30,6 +30,7 @@ body {
 
 
 .header-wrapper {
+    z-index: 999;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -44,8 +45,8 @@ body {
     max-height: 60px;
     min-height: 40px;
 
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    /* border-radius: 0px 0px 10px 10px; */
+    box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -164,3 +165,202 @@ input:checked + .slider:before {
   .slider.round:before {
     border-radius: 50%;
   }
+
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+.side-wrapper {
+    max-width: 400px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-elements{
+    width: 100%;
+    height: 100%
+}
+
+.side-lists {
+    height: 100%;
+    overflow-y: scroll;
+    max-width: 300px;
+
+    width: 100%;
+    border: 1px solid var(--primary);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-x:hidden;
+}
+
+
+.user-profile {
+    z-index: +1;
+    background-color: var(--secondary);
+    width: 100%; /* Ensure same width as other sidebar items */
+    max-width: 300px;
+    height: auto;
+    border: var(--primary) solid 1px;
+    box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Media Query: Adjust Width for Larger Screens */
+@media (min-width: 768px) { /* Tablet & Desktop */
+    .user-profile {
+        width: 15vw; /* 15% of the viewport width */
+        max-width: 300px; /* Prevent it from being too wide */
+    }
+
+
+    .user-profile,
+    .side-item {
+        width: 100%; /* Ensures all sidebar elements match */
+    }
+}
+
+.profile-select {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    top: 0px;
+    padding: 15px;
+    transition-duration: 0.4s;
+}
+
+.profile-select:hover {
+    background-color: var(--primary);
+}
+
+.profile-picture {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: var(--tertiary) 2px solid;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column; /* Stack username & email */
+}
+
+.profile-info p, .profile-info h1 {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--tertiary);
+    
+    
+}
+
+.username {
+    font-size: 1.6rem;
+}
+
+.user-email {
+    font-size: 0.9rem;
+}
+
+.search-bar {
+    position: relative;
+    bottom: 0px;
+    margin: 10px 0px
+
+}
+
+.user-profile input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    color: var(--tertiary);
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.side-item {
+
+    z-index:+1;
+    background-color: var(--secondary);
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    border: var(--primary) solid 1px;
+    box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    color: var(--tertiary);
+    display: flex;
+    align-items: center;
+}
+
+
+.side-item i {
+    margin: 0px 10px;
+    margin-right: 10px;
+}
+.side-item:hover {
+    background-color: var(--primary);
+}
+
+.side-item.active {
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+
+.active-item {
+    width: 5px;
+    background-color: var(--quaternary);
+    height: 70%;
+    position: sticky;
+    display: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.active-item.active {
+    display: block;
+}
+
+.add-list {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--tertiary);
+    height: 50px;;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    position: relative;
+
+}
+.current-day {
+
+    
+}
