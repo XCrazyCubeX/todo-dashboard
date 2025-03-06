@@ -16,6 +16,17 @@
     <script src="src/scripts/theme.js" defer></script>
     <script src="src/scripts/sidebar.js"></script>
 
+    <!-- Firebase SDK (compat versions) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
+    <script src="src/scripts/firebase.js" defer></script>
+    <script src="src/scripts/user-auth.js" defer></script>
+
+
+    
+
+
 </head>
 <body>
 
@@ -45,12 +56,28 @@
 
     <div class="main-wrapper">
         <div class="side-wrapper">
+
+                
+            <div class="profile-select-menu" id="profileMenu">
+                <div class="login-button">
+                    <i class="fa-brands fa-google"></i>
+                    <h1>sign-in</h1>
+                </div>
+                <div class="logout-button">
+                    sign-out
+                </div>
+                            
+            </div>
+
             <div class="sidebar-toggle"><i class="fa-solid fa-caret-right"></i></div>
            
             <div class="side-elements">
                 <div class="user-profile">
 
-                    <div class="profile-select">
+                    <div class="profile-select" id="profileSelect">
+                        
+
+
                         <div class="profile-picture"></div>
                         <div class="profile-info">
                             <h1 class="username">Joyren Terken</h1>
@@ -60,8 +87,11 @@
                     </div>
     
                     <input class="search-bar" type="search" placeholder="Search">
-    
+
+
                 </div>
+
+
                 <div class="current-day side-item" id="sideItem">
                     <div class="active-item"></div>
 
